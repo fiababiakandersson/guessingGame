@@ -56,6 +56,12 @@ public class Guesser {
    */
   private String getReply() {
     String reply = null;
+    reply = System.console().readLine();
+
+    while (!(reply.equals("T")) && !(reply.equals("F"))) {
+      System.out.println("Only T and F are valid answers. Please try again!");
+      reply = System.console().readLine();
+    }
     // Write code here which reads a String from the console.
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
