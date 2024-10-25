@@ -55,11 +55,10 @@ public class Guesser {
    * the player.
    */
   private String getReply() {
-    String reply = null;
-    reply = System.console().readLine();
+    String reply = System.console().readLine();
 
     while (!(reply.equals("T")) && !(reply.equals("F"))) {
-      System.out.println("Only T and F are valid answers. Please try again!");
+      System.out.println("Please reply T for true or F for false");
       reply = System.console().readLine();
     }
     // Write code here which reads a String from the console.
