@@ -1,0 +1,19 @@
+Jag siktar på VG!
+
+- Vad är pull repektive push?
+    "pull" är kommandot vi använder för att "dra ner" ändringar från ett remote repository till vårt lokala repository. Kommandot "push" skickar din commit till det remote repositoryt. 
+
+- När använder man log respektive status?
+    Kommandot "git status" ger oss information om branchen som vi jobbar på. "git status" ger oss dock ingen information om våran commit historik. Då kan vi istället använda "git log" som ger oss information om hela commit historiken för din branch.
+
+- Vad är en Git branch och varför är de viktiga?
+    Git branches hjälper oss att arbeta på olika versioner av våran kod samtidigt. Branches är otroligt viktiga eftersom de gör att vi kan arbeta och testa på flera saker samtidigt utan att riskera kodbasen vilket ökar både säkerheten och flexibiliteten i utvecklingen.
+
+- Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. Förklara skillnaden och motivera när man skulle använda den ena eller andra metoden. Ge exempel på de kommandon du använder för att göra detta och vissa att det fungerar, vilken output du fick från git-kommandona.
+    Detta är de vanligaste Git kommandon för att återställa kod: git reset, git revert och git restore.
+
+    "git reset" används för att återställa kod genom att flytta den senaste commiten till en tidigare commit. "git reset" kan användas på tre olika sätt. Den första är --soft, som behåller alla filer i staging-området men flyttar tillbaka HEAD till tidigare commit. Den andra är --mixed (standard) som också flyttar tillbaka HEAD, men behåller filer i arbetskatalogen istället för i staging-området. Det sista sättet är --hard som, de tidigare sätten, flyttar HEAD till en tidigare commit men till skillnad från de tidigare sätten så tar --hard faktiskt bort alla ändringarna permanent. Därför bör man använda "git reset --hard" med försiktighet.
+
+    Det andra kommandot är "git revert". Detta kommando tar ändringarna från den tidigare commiten och skapar en ny commit med dessa ändringar. Detta sätt att återställa kod är säkrare än "git reset" och bra att använda när man arbetar i ett delat projekt, då det inte tar bort historik. 
+
+    Det sista exemplet på kommandon för att återställa kod är "git restore". Detta kommando använder vi när vi vill återställa ändringar på filnivå eller i arbetskatalogen, vilket är användbart när vi vill gå tillbaka till tidigare versioner av filer i projektet. "git restore" har ingen effekt på historiken.
