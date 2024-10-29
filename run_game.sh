@@ -6,7 +6,7 @@ mkdir $USER"_labb"
 
 for file in *.java
 do
-    cp -v "$file" $USER"_labb"
+    cp "$file" $USER"_labb"
 done
 
 cd $USER"_labb"
