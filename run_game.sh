@@ -1,4 +1,4 @@
-USER="Fia"
+USER="Fia_Andersson"
 
 echo $USER"s program"
 
